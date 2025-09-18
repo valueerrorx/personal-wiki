@@ -59,7 +59,7 @@ hochstellen, tiefstellen - Symbole ... stellen die Schrift auf die entsprechende
 
 ungeordnete Liste, geordnete Liste - Symbole ... versehen Absätze mit Aufzählungszeichen bzw. Nummerierungen.
 
-</>, {} - Symbole ... formatieren speziell für HTML- oder Programmiercode-Bereiche.
+
 
 linksbündig, zentriert, rechtsbündig - Symbole ... beeinflussen die Textausrichtung.
 
