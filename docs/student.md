@@ -31,18 +31,6 @@ Der Texteditor stellt über die Symbolleiste Formatierungsmöglichkeiten und Bef
 
 > Folgende Optionen können über die Symbolleiste erreicht werden:
 
-- `sichern` - Symbol ... speichert den aktuellen Text ab.
-- `rückgängig` - Symbol ... widerruft die letzte Änderung.
-- `wiederherstellen` - Symbol ... stellt widerrufene Änderungen wieder her.
-- `löschen` - Symbol ... entfernt den markierten Text.
-- `fett`, `kursiv`, `unterstrichen` - Symbole ... stellen die Schrift auf die entsprechenden Formatierungen um.
-- `h1` ... `h6` - Symbole ... wenden die entsprechenden Formatvorlagen für Überschriften an.
-- `hochstellen`, `tiefstellen` - Symbole ... stellen die Schrift auf die entsprechenden Formatierungen um.
-- `ungeordnete Liste`, `geordnete Liste` - Symbole ... versehen Absätze mit Aufzählungszeichen bzw. Nummerierungen.
-- `</>`, `{}` - Symbole ... formatieren speziell für HTML- oder Programmiercode-Bereiche.
-- `linksbündig`, `zentriert`, `rechtsbündig` - Symbole ... beeinflussen die Textausrichtung.
-- `Textfarbe` - Symbol ... passt die Farbe des Textes an.
-
 #### Rechtschreibhilfe
 Wenn in der Teacher-Version `LanguageTool aktivieren` angehakt wurde, erscheint in der Student-Version der entsprechende Seitenbereich, über den Rechtschreibhilfen in Anspruch genommen werden können.
 
