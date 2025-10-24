@@ -5,23 +5,21 @@
       
       
       
-        <link rel="canonical" href="https://bildungsportal.github.io/next-exam/quickstart/">
+        <link rel="canonical" href="https://bildungsportal.github.io/next-exam/OverlayFS%2BService/">
       
       
-      
-        <link rel="next" href="..">
       
       
       <link rel="icon" href="../img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
     
     
       
-        <title>Quickstart Guide - Next-Exam Handbuch</title>
+        <title>OverlayFS+Service - Next-Exam Handbuch</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -79,7 +77,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#quickstart-guide" class="md-skip">
+        <a href="#overlay-cleaner-service-einrichten" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +113,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Quickstart Guide
+              OverlayFS+Service
             
           </span>
         </div>
@@ -194,19 +192,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../quickstart.md" class="md-nav__link">
         
   
   
@@ -217,7 +206,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -229,7 +217,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../index.md" class="md-nav__link">
         
   
   
@@ -251,7 +239,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../teacher/" class="md-nav__link">
+      <a href="../teacher.md" class="md-nav__link">
         
   
   
@@ -273,7 +261,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../student/" class="md-nav__link">
+      <a href="../student.md" class="md-nav__link">
         
   
   
@@ -295,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../advanced/" class="md-nav__link">
+      <a href="../advanced.md" class="md-nav__link">
         
   
   
@@ -317,7 +305,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
+      <a href="../faq.md" class="md-nav__link">
         
   
   
@@ -349,8 +337,23 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overlay-cleaner-service-einrichten" class="md-nav__link">
+    <span class="md-ellipsis">
+      (Overlay Cleaner Service einrichten)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -366,11 +369,51 @@
 
 
 
-<h1 id="quickstart-guide">Quickstart Guide</h1>
-<figure>
-    <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="../img/quickstart.png" data-desc-position="bottom"><img alt="Exam-Name" src="../img/quickstart.png" width="100%"></a>
-    <figcaption>Quickstart Guide</figcaption>
-</figure>
+  <h1>OverlayFS+Service</h1>
+
+<h2 id="overlay-cleaner-service-einrichten">(Overlay Cleaner Service einrichten)</h2>
+<h3 id="1-overlay-mount-service">1) Overlay Mount Service</h3>
+<p>(mounted das overlayFS nach /home/student - nachdem der Run-Service fertig ist. Auf diese Weise können auch im Home Verzeichnis Änderungen durchgeführt werden)</p>
+<p><strong>Datei</strong>: <code>/etc/systemd/system/home-student.mount</code></p>
+<pre><code class="language-ini">[Unit]
+Description=OverlayFS for /home/student
+After=overlay-cleaner.service boot-run.service
+Requires=overlay-cleaner.service boot-run.service
+ConditionPathExists=/run/boot-runner.done
+RequiresMountsFor=/mnt/upper /mnt/work
+
+[Mount]
+What=overlay
+Where=/home/student
+Type=overlay
+Options=lowerdir=/home/student,upperdir=/mnt/upper,workdir=/mnt/work
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p><strong>Datei</strong>: <code>/etc/systemd/system/overlay-cleaner.service</code></p>
+<pre><code class="language-ini">[Unit]
+Description=Delete overlay upper/work before mount
+After=local-fs.target
+Before=home-student.mount
+
+[Service]
+Type=oneshot
+ExecStart=/bin/rm -rf /mnt/upper /mnt/work || true
+ExecStartPost=/bin/mkdir -p /mnt/upper /mnt/work || true
+ExecStartPost=/bin/chown -R student:student /mnt/upper /mnt/work || true
+RemainAfterExit=true    
+
+[Install]
+WantedBy=home-student.mount
+</code></pre>
+<h3 id="2-aktivierung-der-services">2) Aktivierung der Services</h3>
+<pre><code class="language-bash">systemctl daemon-reload
+systemctl enable --now overlay-cleaner.service
+systemctl enable --now home-student.mount
+</code></pre>
+<h4 id="kurzlogik">Kurzlogik:</h4>
+<p>Overlay mounted - hängt von boot-run.service (und optional dem Stampfile und dem cleaner service)  ab.</p>
 
 
 
