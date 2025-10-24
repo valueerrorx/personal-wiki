@@ -19,11 +19,12 @@ theme:
         name: Switch to light mode
 plugins:
   - glightbox
-  - with-pdf:
-      author: valueerror
-      copyright: gpl
-      cover_title: nothing matters
-      cover_subtitle: wiki
+  # Temporarily disabled due to plugin error
+  # - with-pdf:
+  #     author: valueerror
+  #     copyright: gpl
+  #     cover_title: nothing matters
+  #     cover_subtitle: wiki
 
 markdown_extensions:
   - attr_list
