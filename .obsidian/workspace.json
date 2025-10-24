@@ -11,10 +11,14 @@
             "id": "3082ae049e730522",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "docs/LiFE-Sync .md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "LiFE-Sync"
             }
           }
         ]
@@ -90,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "docs/LiFE-Sync .md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for LiFE-Sync"
             }
           },
           {
@@ -108,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "docs/LiFE-Sync .md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from LiFE-Sync"
             }
           },
           {
@@ -136,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "docs/LiFE-Sync .md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of LiFE-Sync"
             }
           }
         ]
@@ -164,10 +171,10 @@
   },
   "active": "3082ae049e730522",
   "lastOpenFiles": [
-    "docs/LiFE Client Sync + Server einrichten.md",
-    "docs/LiFE-Sync .md",
-    "docs/OverlayFS+Service.md",
     "docs/OverlayFS.md",
+    "docs/LiFE-Sync .md",
+    "docs/LiFE Client Sync + Server einrichten.md",
+    "docs/OverlayFS+Service.md",
     "docs/index.md",
     "docs/faq.md",
     "docs/advanced.md"
