@@ -4,14 +4,12 @@ nav:
     - LiFE-Sync: "LiFE-Sync.md"
     - OverlayFS: OverlayFS.md
 theme:
-    name: material
+    name: cinder
     favicon: docs/img/favicon.png
     features:
       - navigation.tabs
       - navigation.sections
-      - navigation.top
       - search.highlight
-      - search.share
       - content.code.copy
       - content.code.annotate
     palette:

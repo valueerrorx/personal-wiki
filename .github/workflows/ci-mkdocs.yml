@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - run: pip install mkdocs mkdocs-material mkdocs-glightbox
+      - run: pip install mkdocs mkdocs-cinder mkdocs-glightbox
       - run: mkdocs build --verbose
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
