@@ -1,12 +1,10 @@
-site_name: Next-Exam Handbuch
-site_url: https://bildungsportal.github.io/next-exam/
+site_name: Personal Wiki
+site_url: https://life-edu.eu
 nav:
-  - Quickstart Guide: quickstart.md
-  - Home: index.md
-  - Teacher - Grundlagen: teacher.md
-  - Student - Grundlagen: student.md
-  - Erweiterte Funktionen: advanced.md
-  - Fehlerbehandlung - FAQ: faq.md
+  - LiFE-Sync: LiFE-Sync.md
+
+  - OverlayFS: OverlayFS.md
+
        
 theme:
     name: material
@@ -27,10 +25,10 @@ theme:
 plugins:
   - glightbox
   - with-pdf:
-      author: DPU-Team
-      copyright: Bundesministerium für Bildung
-      cover_title: Next-Exam
-      cover_subtitle: Handbuch
+      author: valueerror
+      copyright: valueerror
+      cover_title: nothing matters
+      cover_subtitle: wiki
 
 markdown_extensions:
   - attr_list
@@ -39,11 +37,3 @@ markdown_extensions:
   - toc:
       toc_depth: 2
 
-extra:
-  consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.

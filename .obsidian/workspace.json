@@ -11,14 +11,10 @@
             "id": "3082ae049e730522",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "docs/OverlayFS+Service.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "OverlayFS+Service"
+              "title": "New tab"
             }
           }
         ]
@@ -94,7 +90,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "docs/OverlayFS+Service.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +99,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for OverlayFS+Service"
+              "title": "Backlinks"
             }
           },
           {
@@ -113,12 +108,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "docs/OverlayFS+Service.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from OverlayFS+Service"
+              "title": "Outgoing links"
             }
           },
           {
@@ -142,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "docs/OverlayFS+Service.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of OverlayFS+Service"
+              "title": "Outline"
             }
           }
         ]
@@ -172,7 +165,9 @@
   "active": "3082ae049e730522",
   "lastOpenFiles": [
     "docs/LiFE Client Sync + Server einrichten.md",
+    "docs/LiFE-Sync .md",
     "docs/OverlayFS+Service.md",
+    "docs/OverlayFS.md",
     "docs/index.md",
     "docs/faq.md",
     "docs/advanced.md"
