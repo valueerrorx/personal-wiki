@@ -1,11 +1,11 @@
 site_name: Personal Wiki
-site_url: https://life-edu.eu
+site_url: https://valueerrorx.github.io/personal-wiki
 nav:
     - LiFE-Sync: "LiFE-Sync .md"
     - OverlayFS: OverlayFS.md
 theme:
     name: material
-    favicon: img/favicon.png
+    favicon: docs/img/favicon.png
 
     palette: 
     # Palette toggle for light mode

@@ -17,8 +17,10 @@ jobs:
         with:
           python-version: '3.x'
       - run: pip install mkdocs mkdocs-material mkdocs-glightbox mkdocs-with-pdf
-      - run: mkdocs build
-      - uses: peaceiris/actions-gh-pages@v4
+      - run: mkdocs build --verbose
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
