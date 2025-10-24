@@ -1,8 +1,6 @@
 site_name: Personal Wiki
 site_url: https://life-edu.eu
-nav:
-    - LiFE-Sync: LiFE-Sync.md
-    - OverlayFS: OverlayFS.md
+# Navigation wird automatisch aus docs/ Verzeichnis generiert
 theme:
     name: material
     favicon: img/favicon.png
