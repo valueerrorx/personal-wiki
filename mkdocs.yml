@@ -1,7 +1,7 @@
 site_name: Personal Wiki
 site_url: https://valueerrorx.github.io/personal-wiki
 nav:
-    - LiFE-Sync: "LiFE-Sync .md"
+    - LiFE-Sync: "LiFE-Sync.md"
     - OverlayFS: OverlayFS.md
 theme:
     name: material
@@ -21,11 +21,6 @@ theme:
         name: Switch to light mode
 plugins:
   - glightbox
-  - with-pdf:
-      author: valueerror
-      copyright: gpl
-      cover_title: nothing matters
-      cover_subtitle: wiki
 
 markdown_extensions:
   - attr_list
