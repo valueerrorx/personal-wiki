@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-      - run: pip install mkdocs mkdocs-material mkdocs-glightbox
+      - run: pip install mkdocs mkdocs-material mkdocs-glightbox mkdocs-with-pdf
       - run: mkdocs build
       - uses: peaceiris/actions-gh-pages@v4
         with:

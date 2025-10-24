@@ -1,6 +1,8 @@
 site_name: Personal Wiki
 site_url: https://life-edu.eu
-# Navigation wird automatisch aus docs/ Verzeichnis generiert
+nav:
+    - LiFE-Sync: "LiFE-Sync .md"
+    - OverlayFS: OverlayFS.md
 theme:
     name: material
     favicon: img/favicon.png
@@ -19,12 +21,11 @@ theme:
         name: Switch to light mode
 plugins:
   - glightbox
-  # Temporarily disabled due to plugin error
-  # - with-pdf:
-  #     author: valueerror
-  #     copyright: gpl
-  #     cover_title: nothing matters
-  #     cover_subtitle: wiki
+  - with-pdf:
+      author: valueerror
+      copyright: gpl
+      cover_title: nothing matters
+      cover_subtitle: wiki
 
 markdown_extensions:
   - attr_list
