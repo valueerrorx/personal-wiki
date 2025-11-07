@@ -2,14 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://valueerrorx.github.io/personal-wiki/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://valueerrorx.github.io/personal-wiki/Git%20Cheatsheet/</loc>
+         <lastmod>2025-11-07</lastmod>
     </url>
     <url>
          <loc>https://valueerrorx.github.io/personal-wiki/LiFE-Sync/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-11-07</lastmod>
     </url>
     <url>
          <loc>https://valueerrorx.github.io/personal-wiki/OverlayFS/</loc>
-         <lastmod>2025-10-24</lastmod>
+         <lastmod>2025-11-07</lastmod>
     </url>
 </urlset>

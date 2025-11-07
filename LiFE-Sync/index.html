@@ -1,659 +1,394 @@
-<!DOCTYPE html><html lang="en" class="no-js"><head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-        <link rel="canonical" href="https://valueerrorx.github.io/personal-wiki/LiFE-Sync/">
-      
-      
-      
-        <link rel="next" href="../OverlayFS/">
-      
-      
-      <link rel="icon" href="../docs/img/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-      
-        <title>LiFE-Sync - Personal Wiki</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
-      
-      
-
+    <link rel="canonical" href="https://valueerrorx.github.io/personal-wiki/LiFE-Sync/">
+    <link rel="shortcut icon" href="../img/favicon.ico">
 
     
+    <title>LiFE-Sync - Personal Wiki</title>
     
-      
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/v4-shims.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.min.css">
+    <link href="//rsms.me/inter/inter.css" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,600,700&amp;subset=latin-ext,latin" rel="stylesheet" type="text/css">
+    <link href="../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="../css/base.min.css" rel="stylesheet">
+    <link href="../css/cinder.min.css" rel="stylesheet">
 
     
+        
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/styles/github.min.css">
+        
     
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+        <![endif]-->
+
     
-  <link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+
+     
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
             .gslide-desc { color: #666; user-select: text; }
             .gslide-image img { background: white; }
-            .gscrollbar-fixer { padding-right: 15px; }
-            .gdesc-inner { font-size: 0.75rem; }
-            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
-            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
-            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
         </style></head>
-  
-  
-    
-    
-      
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
-  
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#overlay-cleaner-service-einrichten" class="md-skip">
-          Skip to content
-        </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
 
-<header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Personal Wiki" class="md-header__button md-logo" aria-label="Personal Wiki" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
+<body>
 
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
-            Personal Wiki
-          </span>
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+
+            
+              <a class="navbar-brand" href="..">Personal Wiki</a>
+            
         </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
-            
-              LiFE-Sync
-            
-          </span>
-        </div>
-      </div>
-    </div>
-    
-      
-        <form class="md-header__option" data-md-component="palette">
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to dark mode" type="radio" name="__palette" id="__palette_0">
-    
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-      </label>
-    
-  
-    
-    
-    
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo" aria-label="Switch to light mode" type="radio" name="__palette" id="__palette_1">
-    
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"></path></svg>
-      </label>
-    
-  
-</form>
-      
-    
-    
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
-    
-    
-    
-    
-  </nav>
-  
-</header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-  
-    
-  
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
-        
-  
-  
-    
-  
-  LiFE-Sync
 
-      </a>
-    </li>
-  
-
-      
-        
-  
-  
-  
-  
-    <li class="md-tabs__item">
-      <a href="../OverlayFS/" class="md-tabs__link">
-        
-  
-  
-    
-  
-  OverlayFS
-
-      </a>
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-
-  
-
-
-<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Personal Wiki" class="md-nav__button md-logo" aria-label="Personal Wiki" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"></path></svg>
-
-    </a>
-    Personal Wiki
-  </label>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-  
-  
-    
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    LiFE-Sync
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  
-  <span class="md-ellipsis">
-    LiFE-Sync
-    
-  </span>
-  
-
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overlay-cleaner-service-einrichten" class="md-nav__link">
-    <span class="md-ellipsis">
-      (Overlay Cleaner Service einrichten)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Server
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../OverlayFS/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    OverlayFS
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-    
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#overlay-cleaner-service-einrichten" class="md-nav__link">
-    <span class="md-ellipsis">
-      (Overlay Cleaner Service einrichten)
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#server" class="md-nav__link">
-    <span class="md-ellipsis">
-      Server
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
                 
-                  
+                
+                    <li class="active">
+                        <a href="./">LiFE-Sync</a>
+                    </li>
+                
+                
+                
+                    <li>
+                        <a href="../OverlayFS/">OverlayFS</a>
+                    </li>
+                
+                
+                </ul>
 
+            <ul class="nav navbar-nav navbar-right">
+                    <li class="disabled">
+                        <a rel="prev">
+                            <i class="fas fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="next" href="../OverlayFS/">
+                            Next <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </li>
+            </ul>
+        </div>
+    </div>
+</div>
 
+    <div class="container">
+        
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="first-level active"><a href="#overlay-cleaner-service-einrichten">(Overlay Cleaner Service einrichten)</a></li>
+            <li class="second-level"><a href="#client">Client</a></li>
+                
+            <li class="second-level"><a href="#1-verzeichnisse-erstellen">1) Verzeichnisse erstellen</a></li>
+                
+            <li class="second-level"><a href="#2-fetch-service">2) Fetch-Service</a></li>
+                
+            <li class="second-level"><a href="#3-run-service">3) Run-Service</a></li>
+                
+            <li class="second-level"><a href="#4-overlay-mount-service">4) Overlay Mount Service</a></li>
+                
+            <li class="second-level"><a href="#5-aktivierung-der-services">5) Aktivierung der Services</a></li>
+                
+                <li class="third-level"><a href="#kurzlogik">Kurzlogik:</a></li>
+        <li class="first-level "><a href="#_1"></a></li>
+        <li class="first-level "><a href="#server">Server</a></li>
+            <li class="second-level"><a href="#0-basis">0) Basis</a></li>
+                
+            <li class="second-level"><a href="#1-user-verzeichnisse">1) User &amp; Verzeichnisse</a></li>
+                
+            <li class="second-level"><a href="#2-skripte-ablegen">2) Skripte ablegen</a></li>
+                
+            <li class="second-level"><a href="#3-manifest-erzeugen">3) Manifest erzeugen</a></li>
+                
+            <li class="second-level"><a href="#4-http-server-als-systemd-service">4) HTTP-Server als systemd-Service</a></li>
+                
+            <li class="second-level"><a href="#5-service-aktivieren">5) Service aktivieren</a></li>
+                
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
 
-<h2 id="overlay-cleaner-service-einrichten">(Overlay Cleaner Service einrichten)<a class="headerlink" href="#overlay-cleaner-service-einrichten" title="Permanent link">¶</a></h2>
-<h3 id="client">Client<a class="headerlink" href="#client" title="Permanent link">¶</a></h3>
-<h3 id="1-verzeichnisse-erstellen">1) Verzeichnisse erstellen<a class="headerlink" href="#1-verzeichnisse-erstellen" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/lib/boot-fetcher/queue<span class="w"> </span>/var/lib/boot-fetcher/done<span class="w"> </span>/var/lib/boot-fetcher/work
-</code></pre></div>
-<h3 id="2-fetch-service">2) Fetch-Service<a class="headerlink" href="#2-fetch-service" title="Permanent link">¶</a></h3>
+<h2 id="overlay-cleaner-service-einrichten">(Overlay Cleaner Service einrichten)</h2>
+<h3 id="client">Client</h3>
+<h3 id="1-verzeichnisse-erstellen">1) Verzeichnisse erstellen</h3>
+<pre><code class="language-bash">mkdir -p /var/lib/boot-fetcher/queue /var/lib/boot-fetcher/done /var/lib/boot-fetcher/work
+</code></pre>
+<h3 id="2-fetch-service">2) Fetch-Service</h3>
 <p>(holt Dateien vom http server auf port 8080)</p>
-<p><strong>Datei</strong>: <code>/usr/local/bin/boot-fetch.sh</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="sb">`</span><span class="c1">#!/usr/bin/env bash`</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="sb">`</span><span class="nb">set</span><span class="w"> </span>-euo<span class="w"> </span>pipefail<span class="w">                                   </span><span class="c1"># fail fast`</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="sb">`</span><span class="nv">SERVER_IP</span><span class="o">=</span><span class="s2">"10.40.0.1"</span><span class="w">                               </span><span class="c1"># &lt;- fixe Server-IP`</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="sb">`</span><span class="nv">PORT</span><span class="o">=</span><span class="s2">"8080"</span><span class="w">                                         </span><span class="c1"># &lt;- HTTP-Port`</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="sb">`</span><span class="nv">REMOTE</span><span class="o">=</span><span class="s2">"queue"</span><span class="w">                                      </span><span class="c1"># &lt;- Server-Unterordner`</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="sb">`</span><span class="nv">BASE</span><span class="o">=</span><span class="s2">"http://</span><span class="si">${</span><span class="nv">SERVER_IP</span><span class="si">}</span><span class="s2">:</span><span class="si">${</span><span class="nv">PORT</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">REMOTE</span><span class="si">}</span><span class="s2">"</span><span class="w">        </span><span class="c1"># base url`</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="sb">`</span><span class="nv">STATE</span><span class="o">=</span><span class="s2">"/var/lib/boot-fetcher"</span><span class="w">                       </span><span class="c1"># state dir`</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="sb">`</span><span class="nv">QUEUE</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">STATE</span><span class="si">}</span><span class="s2">/queue"</span><span class="w">                              </span><span class="c1"># queue for scripts`</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="sb">`</span><span class="nv">WORK</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">STATE</span><span class="si">}</span><span class="s2">/work"</span><span class="w">                                </span><span class="c1"># temp dir`</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="sb">`</span>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">QUEUE</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">WORK</span><span class="si">}</span><span class="s2">"</span><span class="w">                       </span><span class="c1"># ensure dirs`</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="sb">`</span>curl<span class="w"> </span>-fsS<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE</span><span class="si">}</span><span class="s2">/scripts.txt"</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">WORK</span><span class="si">}</span><span class="s2">/scripts.txt"</span><span class="w">   </span><span class="c1"># fetch manifest`</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="sb">`</span>mapfile<span class="w"> </span>-t<span class="w"> </span>FILES<span class="w"> </span>&lt;<span class="w"> </span>&lt;<span class="o">(</span>grep<span class="w"> </span>-Ev<span class="w"> </span><span class="s1">'^\s*$|^\s*#'</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">WORK</span><span class="si">}</span><span class="s2">/scripts.txt"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-u<span class="o">)</span><span class="w">  </span><span class="c1"># parse list`</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="sb">`</span><span class="k">for</span><span class="w"> </span>f<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">FILES</span><span class="p">[@]</span><span class="si">}</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">do</span><span class="sb">`</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="sb">`</span>curl<span class="w"> </span>-fsS<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">BASE</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">f</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span>-o<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">QUEUE</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">f</span><span class="si">}</span><span class="s2">"</span><span class="w">      </span><span class="c1"># download each listed file`</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="sb">`</span>chmod<span class="w"> </span>+x<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">QUEUE</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">f</span><span class="si">}</span><span class="s2">"</span><span class="w">                         </span><span class="c1"># ensure executable`</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="sb">`</span><span class="k">done</span><span class="sb">`</span>
-</code></pre></div><p></p>
+<p><strong>Datei</strong>: <code>/usr/local/bin/boot-fetch.sh</code></p>
+<pre><code class="language-bash">`#!/usr/bin/env bash`
+`set -euo pipefail                                   # fail fast`
+`SERVER_IP="10.40.0.1"                               # &lt;- fixe Server-IP`
+`PORT="8080"                                         # &lt;- HTTP-Port`
+`REMOTE="queue"                                      # &lt;- Server-Unterordner`
+`BASE="http://${SERVER_IP}:${PORT}/${REMOTE}"        # base url`
+
+`STATE="/var/lib/boot-fetcher"                       # state dir`
+`QUEUE="${STATE}/queue"                              # queue for scripts`
+`WORK="${STATE}/work"                                # temp dir`
+
+`mkdir -p "${QUEUE}" "${WORK}"                       # ensure dirs`
+
+`curl -fsS "${BASE}/scripts.txt" -o "${WORK}/scripts.txt"   # fetch manifest`
+`mapfile -t FILES &lt; &lt;(grep -Ev '^\s*$|^\s*#' "${WORK}/scripts.txt" | sort -u)  # parse list`
+
+`for f in "${FILES[@]}"; do`
+  `curl -fsS "${BASE}/${f}" -o "${QUEUE}/${f}"      # download each listed file`
+  `chmod +x "${QUEUE}/${f}"                         # ensure executable`
+`done`
+</code></pre>
 <p><code>chmod +x /usr/local/bin/boot-fetch.sh</code></p>
-<p><strong>Datei</strong>: <code>/etc/systemd/system/boot-fetch.service</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Fetch boot scripts from server (no execution)</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="k">[Service]</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/boot-fetch.sh</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="na">TimeoutStartSec</span><span class="o">=</span><span class="s">30s</span><span class="w">                                         </span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="na">RemainAfterExit</span><span class="o">=</span><span class="s">yes</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="k">[Install]</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
-</code></pre></div><p></p>
-<h3 id="3-run-service">3) Run-Service<a class="headerlink" href="#3-run-service" title="Permanent link">¶</a></h3>
+<p><strong>Datei</strong>: <code>/etc/systemd/system/boot-fetch.service</code></p>
+<pre><code class="language-ini">[Unit]
+Description=Fetch boot scripts from server (no execution)
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/boot-fetch.sh
+TimeoutStartSec=30s                                         
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h3 id="3-run-service">3) Run-Service</h3>
 <p>(führt aus, pflegt „done“, signalisiert Fertig)</p>
-<p><strong>Datei</strong>: <code>/usr/local/bin/boot-run.sh</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="ch">#!/usr/bin/env bash</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nb">set</span><span class="w"> </span>-euo<span class="w"> </span>pipefail<span class="w">                                   </span><span class="c1"># fail fast</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nv">STATE</span><span class="o">=</span><span class="s2">"/var/lib/boot-fetcher"</span><span class="w">                       </span><span class="c1"># state dir</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nv">QUEUE</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">STATE</span><span class="si">}</span><span class="s2">/queue"</span><span class="w">                              </span><span class="c1"># queue with scripts</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nv">DONE</span><span class="o">=</span><span class="s2">"</span><span class="si">${</span><span class="nv">STATE</span><span class="si">}</span><span class="s2">/done"</span><span class="w">                                </span><span class="c1"># done dir</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="nv">STAMP</span><span class="o">=</span><span class="s2">"/run/boot-runner.done"</span><span class="w">                       </span><span class="c1"># per-boot completion stamp</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>mkdir<span class="w"> </span>-p<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">QUEUE</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">DONE</span><span class="si">}</span><span class="s2">"</span><span class="w">                       </span><span class="c1"># ensure dirs</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nb">shopt</span><span class="w"> </span>-s<span class="w"> </span>nullglob<span class="w">                                   </span><span class="c1"># empty glob -&gt; no iteration</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">for</span><span class="w"> </span>s<span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">QUEUE</span><span class="si">}</span><span class="s2">"</span>/*.sh<span class="p">;</span><span class="w"> </span><span class="k">do</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nv">name</span><span class="o">=</span><span class="s2">"</span><span class="k">$(</span>basename<span class="w"> </span><span class="s2">"</span><span class="nv">$s</span><span class="s2">"</span><span class="k">)</span><span class="s2">"</span><span class="w">                           </span><span class="c1"># script base name</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="o">[[</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">DONE</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2">"</span><span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">{</span><span class="w"> </span>rm<span class="w"> </span>-f<span class="w"> </span><span class="s2">"</span><span class="nv">$s</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">continue</span><span class="p">;</span><span class="w"> </span><span class="o">}</span><span class="w">   </span><span class="c1"># skip if already done, clean queue</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">  </span><span class="k">if</span><span class="w"> </span>bash<span class="w"> </span><span class="s2">"</span><span class="nv">$s</span><span class="s2">"</span><span class="p">;</span><span class="w"> </span><span class="k">then</span><span class="w">                                </span><span class="c1"># execute as root</span>
-<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">    </span>mv<span class="w"> </span>-f<span class="w"> </span><span class="s2">"</span><span class="nv">$s</span><span class="s2">"</span><span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">DONE</span><span class="si">}</span><span class="s2">/</span><span class="si">${</span><span class="nv">name</span><span class="si">}</span><span class="s2">"</span><span class="w">                    </span><span class="c1"># move to done (no duplicate in queue)</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">  </span><span class="k">fi</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="k">done</span>
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>touch<span class="w"> </span><span class="s2">"</span><span class="si">${</span><span class="nv">STAMP</span><span class="si">}</span><span class="s2">"</span><span class="w">                                    </span><span class="c1"># signal: all done this boot</span>
-</code></pre></div><p></p>
+<p><strong>Datei</strong>: <code>/usr/local/bin/boot-run.sh</code></p>
+<pre><code class="language-bash">#!/usr/bin/env bash
+set -euo pipefail                                   # fail fast
+STATE="/var/lib/boot-fetcher"                       # state dir
+QUEUE="${STATE}/queue"                              # queue with scripts
+DONE="${STATE}/done"                                # done dir
+STAMP="/run/boot-runner.done"                       # per-boot completion stamp
+
+mkdir -p "${QUEUE}" "${DONE}"                       # ensure dirs
+shopt -s nullglob                                   # empty glob -&gt; no iteration
+
+for s in "${QUEUE}"/*.sh; do
+  name="$(basename "$s")"                           # script base name
+  [[ -e "${DONE}/${name}" ]] &amp;&amp; { rm -f "$s"; continue; }   # skip if already done, clean queue
+  if bash "$s"; then                                # execute as root
+    mv -f "$s" "${DONE}/${name}"                    # move to done (no duplicate in queue)
+  fi
+done
+
+touch "${STAMP}"                                    # signal: all done this boot
+
+</code></pre>
 <p><code>chmod +x /usr/local/bin/boot-run.sh</code></p>
-<p><strong>Datei</strong>: <code>/etc/systemd/system/boot-run.service</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Execute queued boot scripts and mark them done</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="na">Wants</span><span class="o">=</span><span class="s">boot-fetch.service</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="na">After</span><span class="o">=</span><span class="s">boot-fetch.service</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">[Service]</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/local/bin/boot-run.sh</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="na">RemainAfterExit</span><span class="o">=</span><span class="s">yes</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="k">[Install]</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
-</code></pre></div><p></p>
-<h3 id="4-overlay-mount-service">4) Overlay Mount Service<a class="headerlink" href="#4-overlay-mount-service" title="Permanent link">¶</a></h3>
+<p><strong>Datei</strong>: <code>/etc/systemd/system/boot-run.service</code></p>
+<pre><code class="language-ini">[Unit]
+Description=Execute queued boot scripts and mark them done
+Wants=boot-fetch.service
+After=boot-fetch.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/boot-run.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h3 id="4-overlay-mount-service">4) Overlay Mount Service</h3>
 <p>(mounted das overlayFS nach /home/student - nachdem der Run-Service fertig ist. Auf diese Weise können auch im Home Verzeichnis Änderungen durchgeführt werden)</p>
-<p><strong>Datei</strong>: <code>/etc/systemd/system/home-student.mount</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">OverlayFS for /home/student</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="na">After</span><span class="o">=</span><span class="s">overlay-cleaner.service boot-run.service</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="na">Requires</span><span class="o">=</span><span class="s">overlay-cleaner.service boot-run.service</span>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="na">ConditionPathExists</span><span class="o">=</span><span class="s">/run/boot-runner.done</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="na">RequiresMountsFor</span><span class="o">=</span><span class="s">/mnt/upper /mnt/work</span>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="k">[Mount]</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="na">What</span><span class="o">=</span><span class="s">overlay</span>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="na">Where</span><span class="o">=</span><span class="s">/home/student</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="na">Type</span><span class="o">=</span><span class="s">overlay</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="na">Options</span><span class="o">=</span><span class="s">lowerdir=/home/student,upperdir=/mnt/upper,workdir=/mnt/work</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>
-<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="k">[Install]</span>
-<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
-</code></pre></div><p></p>
-<p><strong>Datei</strong>: <code>/etc/systemd/system/overlay-cleaner.service</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Delete overlay upper/work before mount</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="na">After</span><span class="o">=</span><span class="s">local-fs.target</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="na">Before</span><span class="o">=</span><span class="s">home-student.mount</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="k">[Service]</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">oneshot</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/bin/rm -rf /mnt/upper /mnt/work || true</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="na">ExecStartPost</span><span class="o">=</span><span class="s">/bin/mkdir -p /mnt/upper /mnt/work || true</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="na">ExecStartPost</span><span class="o">=</span><span class="s">/bin/chown -R student:student /mnt/upper /mnt/work || true</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="na">RemainAfterExit</span><span class="o">=</span><span class="s">true</span><span class="w">    </span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="k">[Install]</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">home-student.mount</span>
-</code></pre></div><p></p>
-<h3 id="5-aktivierung-der-services">5) Aktivierung der Services<a class="headerlink" href="#5-aktivierung-der-services" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>systemctl<span class="w"> </span>daemon-reload
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>boot-fetch.service
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>boot-run.service
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>overlay-cleaner.service
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>home-student.mount
-</code></pre></div>
-<h4 id="kurzlogik">Kurzlogik:<a class="headerlink" href="#kurzlogik" title="Permanent link">¶</a></h4>
+<p><strong>Datei</strong>: <code>/etc/systemd/system/home-student.mount</code></p>
+<pre><code class="language-ini">[Unit]
+Description=OverlayFS for /home/student
+After=overlay-cleaner.service boot-run.service
+Requires=overlay-cleaner.service boot-run.service
+ConditionPathExists=/run/boot-runner.done
+RequiresMountsFor=/mnt/upper /mnt/work
+
+[Mount]
+What=overlay
+Where=/home/student
+Type=overlay
+Options=lowerdir=/home/student,upperdir=/mnt/upper,workdir=/mnt/work
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<p><strong>Datei</strong>: <code>/etc/systemd/system/overlay-cleaner.service</code></p>
+<pre><code class="language-ini">[Unit]
+Description=Delete overlay upper/work before mount
+After=local-fs.target
+Before=home-student.mount
+
+[Service]
+Type=oneshot
+ExecStart=/bin/rm -rf /mnt/upper /mnt/work || true
+ExecStartPost=/bin/mkdir -p /mnt/upper /mnt/work || true
+ExecStartPost=/bin/chown -R student:student /mnt/upper /mnt/work || true
+RemainAfterExit=true    
+
+[Install]
+WantedBy=home-student.mount
+</code></pre>
+<h3 id="5-aktivierung-der-services">5) Aktivierung der Services</h3>
+<pre><code class="language-bash">systemctl daemon-reload
+systemctl enable --now boot-fetch.service
+systemctl enable --now boot-run.service
+systemctl enable --now overlay-cleaner.service
+systemctl enable --now home-student.mount
+</code></pre>
+<h4 id="kurzlogik">Kurzlogik:</h4>
 <p>Fetch holt → 
 Run checkt ob Script neu ist →
 Run führt aus wenn neu
 Run kopiert Script nach ./done &amp; setzt /run/boot-runner.done → 
 Overlay mounted - hängt von boot-run.service (und optional dem Stampfile und dem cleaner service)  ab.</p>
-<h1 id="_1"><br><a class="headerlink" href="#_1" title="Permanent link">¶</a></h1>
-<h1 id="server">Server<a class="headerlink" href="#server" title="Permanent link">¶</a></h1>
-<h3 id="0-basis">0) Basis<a class="headerlink" href="#0-basis" title="Permanent link">¶</a></h3>
+<h1 id="_1"><br></h1>
+<h1 id="server">Server</h1>
+<h3 id="0-basis">0) Basis</h3>
 <p>Feste Server-IP notieren (z. B. 10.40.0.1)
 Port wählen (z. B. 8080)</p>
-<h3 id="1-user-verzeichnisse">1) User &amp; Verzeichnisse<a class="headerlink" href="#1-user-verzeichnisse" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>sudo<span class="w"> </span>useradd<span class="w"> </span>-r<span class="w"> </span>-s<span class="w"> </span>/usr/sbin/nologin<span class="w"> </span>bootscripts<span class="w">      </span><span class="c1"># system user (no shell)</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/srv/bootscripts/queue
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>bootscripts:bootscripts<span class="w"> </span>/srv/bootscripts
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/srv/bootscripts
-</code></pre></div>
-<h3 id="2-skripte-ablegen">2) Skripte ablegen<a class="headerlink" href="#2-skripte-ablegen" title="Permanent link">¶</a></h3>
+<h3 id="1-user-verzeichnisse">1) User &amp; Verzeichnisse</h3>
+<pre><code class="language-bash">sudo useradd -r -s /usr/sbin/nologin bootscripts      # system user (no shell)
+sudo mkdir -p /srv/bootscripts/queue
+sudo chown -R bootscripts:bootscripts /srv/bootscripts
+sudo chmod -R 755 /srv/bootscripts
+</code></pre>
+<h3 id="2-skripte-ablegen">2) Skripte ablegen</h3>
 <p><code>cd /srv/bootscripts/queue</code></p>
-<p>Beispiel:
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span><span class="nb">printf</span><span class="w"> </span><span class="s1">'#!/usr/bin/env bash\necho hello\n'</span><span class="w"> </span>&gt;<span class="w"> </span><span class="m">001</span>-init.sh
-</code></pre></div><p></p>
-<h3 id="3-manifest-erzeugen">3) Manifest erzeugen<a class="headerlink" href="#3-manifest-erzeugen" title="Permanent link">¶</a></h3>
+<p>Beispiel:</p>
+<pre><code class="language-bash">sudo printf '#!/usr/bin/env bash\necho hello\n' &gt; 001-init.sh
+</code></pre>
+<h3 id="3-manifest-erzeugen">3) Manifest erzeugen</h3>
 <p>(nur die Skripte die in scripts.txt vermerkt sind werden vom Client auch heruntergeladen und ausgeführt)</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nb">cd</span><span class="w"> </span>/srv/bootscripts/queue
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>ls<span class="w"> </span>-1<span class="w"> </span>*.sh<span class="w"> </span><span class="m">2</span>&gt;/dev/null<span class="w"> </span><span class="p">|</span><span class="w"> </span>sort<span class="w"> </span>-V<span class="w"> </span>&gt;<span class="w"> </span>scripts.txt<span class="w">            </span><span class="c1"># one filename per line</span>
+<pre><code class="language-bash">cd /srv/bootscripts/queue
+ls -1 *.sh 2&gt;/dev/null | sort -V &gt; scripts.txt            # one filename per line
+</code></pre>
+<h3 id="4-http-server-als-systemd-service">4) HTTP-Server als systemd-Service</h3>
+<p><strong>Datei:</strong> <code>/etc/systemd/system/bootscripts-http.service</code></p>
+<pre><code class="language-ini">[Unit]
+Description=Serve /srv/bootscripts via Python HTTP
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bootscripts
+Group=bootscripts
+WorkingDirectory=/srv/bootscripts
+ExecStart=/usr/bin/python3 -m http.server 8080 --bind 0.0.0.0
+Restart=on-failure
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=full
+ProtectHome=true
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h3 id="5-service-aktivieren">5) Service aktivieren</h3>
+<pre><code class="language-bash">sudo systemctl daemon-reload
+sudo systemctl enable --now bootscripts-http.service
 </code></pre></div>
-<h3 id="4-http-server-als-systemd-service">4) HTTP-Server als systemd-Service<a class="headerlink" href="#4-http-server-als-systemd-service" title="Permanent link">¶</a></h3>
-<p><strong>Datei:</strong> <code>/etc/systemd/system/bootscripts-http.service</code>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">[Unit]</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="na">Description</span><span class="o">=</span><span class="s">Serve /srv/bootscripts via Python HTTP</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="na">After</span><span class="o">=</span><span class="s">network-online.target</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="na">Wants</span><span class="o">=</span><span class="s">network-online.target</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>
-<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="k">[Service]</span>
-<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="na">Type</span><span class="o">=</span><span class="s">simple</span>
-<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="na">User</span><span class="o">=</span><span class="s">bootscripts</span>
-<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="na">Group</span><span class="o">=</span><span class="s">bootscripts</span>
-<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="na">WorkingDirectory</span><span class="o">=</span><span class="s">/srv/bootscripts</span>
-<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="na">ExecStart</span><span class="o">=</span><span class="s">/usr/bin/python3 -m http.server 8080 --bind 0.0.0.0</span>
-<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="na">Restart</span><span class="o">=</span><span class="s">on-failure</span>
-<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="na">NoNewPrivileges</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="na">PrivateTmp</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="na">ProtectSystem</span><span class="o">=</span><span class="s">full</span>
-<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="na">ProtectHome</span><span class="o">=</span><span class="s">true</span>
-<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a>
-<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="k">[Install]</span>
-<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="na">WantedBy</span><span class="o">=</span><span class="s">multi-user.target</span>
-</code></pre></div><p></p>
-<h3 id="5-service-aktivieren">5) Service aktivieren<a class="headerlink" href="#5-service-aktivieren" title="Permanent link">¶</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>daemon-reload
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>bootscripts-http.service
-</code></pre></div>
+        
+        
+    </div>
 
+    
+      <footer class="col-md-12 text-center">
+          
+          
+            <hr>
+            <p>
+            <small>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</small>
+            </p>
+          
 
+          
+          
+      </footer>
+    
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../js/bootstrap-3.0.3.min.js"></script>
 
+    
+    <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.18.0/build/highlight.min.js"></script>
+        
+    <script>hljs.initHighlightingOnLoad();</script>
+    
 
+    <script>var base_url = ".."</script>
+    
+    <script src="../js/base.js"></script>
 
-
-
-
-
-
-
-
-                
-              </article>
+    <div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
             </div>
-          
-          
-<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
         </div>
-        
-          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
-  Back to top
-</button>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-  
-    Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-      Material for MkDocs
-    </a>
-  
+    </div>
 </div>
-      
-    </div>
-  </div>
-</footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
     
-    
-    
-      
-      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.share", "content.code.copy", "content.code.annotate"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
-      
-    
-  
+
+
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
-document$.subscribe(()=>{ lightbox.reload(); });
 </script></body></html>

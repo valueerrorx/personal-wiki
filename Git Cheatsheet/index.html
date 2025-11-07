@@ -4,11 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     
-    <link rel="canonical" href="https://valueerrorx.github.io/personal-wiki/OverlayFS/">
+    <link rel="canonical" href="https://valueerrorx.github.io/personal-wiki/Git%20Cheatsheet/">
     <link rel="shortcut icon" href="../img/favicon.ico">
 
     
-    <title>OverlayFS - Personal Wiki</title>
+    <title>Git Cheatsheet - Personal Wiki</title>
     
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
@@ -77,24 +77,14 @@
                 
                 
                 
-                    <li class="active">
-                        <a href="./">OverlayFS</a>
+                    <li>
+                        <a href="../OverlayFS/">OverlayFS</a>
                     </li>
                 
                 
                 </ul>
 
             <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a rel="prev" href="../LiFE-Sync/">
-                            <i class="fas fa-arrow-left"></i> Previous
-                        </a>
-                    </li>
-                    <li class="disabled">
-                        <a rel="next">
-                            Next <i class="fas fa-arrow-right"></i>
-                        </a>
-                    </li>
             </ul>
         </div>
     </div>
@@ -105,59 +95,38 @@
         
         <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
-        <li class="first-level active"><a href="#overlay-cleaner-service-einrichten">(Overlay Cleaner Service einrichten)</a></li>
-            <li class="second-level"><a href="#1-overlay-mount-service">1) Overlay Mount Service</a></li>
-                
-            <li class="second-level"><a href="#2-aktivierung-der-services">2) Aktivierung der Services</a></li>
-                
-                <li class="third-level"><a href="#kurzlogik">Kurzlogik:</a></li>
+        <li class="first-level active"><a href="#alle-remote-repositories-listen">Alle remote repositories listen</a></li>
+        <li class="first-level "><a href="#alle-lokalen-tags-listen">alle lokalen tags listen</a></li>
+        <li class="first-level "><a href="#alle-remote-tags-listen">alle remote tags listen</a></li>
+        <li class="first-level "><a href="#lokales-tag-loschen">lokales tag löschen</a></li>
+        <li class="first-level "><a href="#tag-auf-remote-loschen">tag auf remote löschen</a></li>
+        <li class="first-level "><a href="#branch-erstellen-und-in-den-branch-wechseln">branch erstellen und in den branch wechseln</a></li>
+        <li class="first-level "><a href="#branch-erstellen">branch erstellen</a></li>
+        <li class="first-level "><a href="#in-branch-wechseln">in branch wechseln</a></li>
+        <li class="first-level "><a href="#main-in-den-branch-mergen">main in den branch mergen</a></li>
     </ul>
 </div></div>
         <div class="col-md-9" role="main">
 
-<h2 id="overlay-cleaner-service-einrichten">(Overlay Cleaner Service einrichten)</h2>
-<h3 id="1-overlay-mount-service">1) Overlay Mount Service</h3>
-<p>(mounted das overlayFS nach /home/student - nachdem der Run-Service fertig ist. Auf diese Weise können auch im Home Verzeichnis Änderungen durchgeführt werden)</p>
-<p><strong>Datei</strong>: <code>/etc/systemd/system/home-student.mount</code></p>
-<pre><code class="language-ini">[Unit]
-Description=OverlayFS for /home/student
-After=overlay-cleaner.service boot-run.service
-Requires=overlay-cleaner.service boot-run.service
-ConditionPathExists=/run/boot-runner.done
-RequiresMountsFor=/mnt/upper /mnt/work
-
-[Mount]
-What=overlay
-Where=/home/student
-Type=overlay
-Options=lowerdir=/home/student,upperdir=/mnt/upper,workdir=/mnt/work
-
-[Install]
-WantedBy=multi-user.target
-</code></pre>
-<p><strong>Datei</strong>: <code>/etc/systemd/system/overlay-cleaner.service</code></p>
-<pre><code class="language-ini">[Unit]
-Description=Delete overlay upper/work before mount
-After=local-fs.target
-Before=home-student.mount
-
-[Service]
-Type=oneshot
-ExecStart=/bin/rm -rf /mnt/upper /mnt/work || true
-ExecStartPost=/bin/mkdir -p /mnt/upper /mnt/work || true
-ExecStartPost=/bin/chown -R student:student /mnt/upper /mnt/work || true
-RemainAfterExit=true    
-
-[Install]
-WantedBy=home-student.mount
-</code></pre>
-<h3 id="2-aktivierung-der-services">2) Aktivierung der Services</h3>
-<pre><code class="language-bash">systemctl daemon-reload
-systemctl enable --now overlay-cleaner.service
-systemctl enable --now home-student.mount
-</code></pre>
-<h4 id="kurzlogik">Kurzlogik:</h4>
-<p>Overlay mounted - hängt von boot-run.service (und optional dem Stampfile und dem cleaner service)  ab.</p></div>
+<h3 id="alle-remote-repositories-listen">Alle remote repositories listen</h3>
+<p>git remote -v</p>
+<h3 id="alle-lokalen-tags-listen">alle lokalen tags listen</h3>
+<p>git tag</p>
+<h3 id="alle-remote-tags-listen">alle remote tags listen</h3>
+<p>git ls-remote --tags githubmain</p>
+<h3 id="lokales-tag-loschen">lokales tag löschen</h3>
+<p>git tag -d pre1.1.0.8</p>
+<h3 id="tag-auf-remote-loschen">tag auf remote löschen</h3>
+<p>git push origin --delete pre1.1.0.8
+git push githubmain --delete pre1.1.0.8</p>
+<h3 id="branch-erstellen-und-in-den-branch-wechseln">branch erstellen und in den branch wechseln</h3>
+<p>git switch -c newbranch</p>
+<h3 id="branch-erstellen">branch erstellen</h3>
+<p>git branch newbranch</p>
+<h3 id="in-branch-wechseln">in branch wechseln</h3>
+<p>git switch newbranch</p>
+<h3 id="main-in-den-branch-mergen">main in den branch mergen</h3>
+<p>git merge main // im branch ausführen</p></div>
         
         
     </div>
